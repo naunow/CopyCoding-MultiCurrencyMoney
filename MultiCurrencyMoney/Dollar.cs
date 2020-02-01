@@ -20,7 +20,10 @@ namespace MultiCurrencyMoney
 
             // 5はどこから来ているかというと、コンストラクタに渡された引数から来ている。
             // ならば、コンストラクタの中でamountフィールドに代入したらどうだろう。
-            amount *= 2;
+            //amount *= 2;
+
+            // 2はTimesメソッドの引数なので、コードにベタ書きしている値を書き換えられる。
+            amount *= multiplier;
         }
     }
 }
