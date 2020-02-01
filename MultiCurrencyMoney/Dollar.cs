@@ -6,16 +6,18 @@ namespace MultiCurrencyMoney
 {
     public class Dollar
     {
-        // テストを通すための最小限の変更は、このようになる。
-        public int amount = 10;
+        // 重複の除去をはじめる。10はどこから来たのかといえば、5と2を掛け算したものだった。
+        public int amount = 5 * 2;
+        //public int amount = 10;
+
         public Dollar(int amount)
         {
-            // コンパイルエラーを通すことが主眼なので、中身は空で良い。
+
         }
 
         public void Times(int multiplier)
         {
-            // コンパイルエラーを通すことが主眼なので、中身は空で良い。
+
         }
     }
 }
