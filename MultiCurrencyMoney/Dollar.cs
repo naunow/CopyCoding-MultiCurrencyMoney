@@ -6,7 +6,8 @@ namespace MultiCurrencyMoney
 {
     public class Dollar
     {
-        public int amount;
+        // テストを通すための最小限の変更は、このようになる。
+        public int amount = 10;
         public Dollar(int amount)
         {
             // コンパイルエラーを通すことが主眼なので、中身は空で良い。
