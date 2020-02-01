@@ -6,8 +6,8 @@ namespace MultiCurrencyMoney
 {
     public class Dollar
     {
-        // 重複の除去をはじめる。10はどこから来たのかといえば、5と2を掛け算したものだった。
-        public int amount = 5 * 2;
+        public int amount;
+        //public int amount = 5 * 2;
         //public int amount = 10;
 
         public Dollar(int amount)
@@ -17,7 +17,8 @@ namespace MultiCurrencyMoney
 
         public void Times(int multiplier)
         {
-
+            // 金額の設定を、コンストラクタからTimesメソッドの中に移動する。
+            amount = 5 * 2;
         }
     }
 }
