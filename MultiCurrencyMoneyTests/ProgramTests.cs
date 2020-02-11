@@ -29,6 +29,9 @@ namespace MultiCurrencyMoney.Tests
             Assert.IsTrue(new Dollar(5).Equals(new Dollar(5)));
             Assert.IsFalse(new Dollar(5).Equals(new Dollar(6)));
 
+            // 実は、Timesメソッドの一般化にも三角測量を使える。
+            // $5 * 2 = $10 と、$5 * 3 = $15 が出てきたら、もうベタ書きの値を返すことはできないからだ。
+
         }
     }
 }
