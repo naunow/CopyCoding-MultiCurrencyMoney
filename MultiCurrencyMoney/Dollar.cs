@@ -23,7 +23,10 @@ namespace MultiCurrencyMoney
         public bool Equals(Object obj)
         {
             // テストを通すために、trueを返すだけの仮実装を行う。
-            return true;
+            //return true;
+
+            Dollar dollar = (Dollar) obj;
+            return amount == dollar.amount;
         }
     }
 }

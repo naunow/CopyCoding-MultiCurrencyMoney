@@ -24,7 +24,11 @@ namespace MultiCurrencyMoney.Tests
         [TestMethod()]
         public void TestEquality()
         {
+            // 三角測量を行うためには、実例は2つ必要になる。
+            // すると、等価性比較を一般化する必要が生まれる。
             Assert.IsTrue(new Dollar(5).Equals(new Dollar(5)));
+            Assert.IsFalse(new Dollar(5).Equals(new Dollar(6)));
+
         }
     }
 }
