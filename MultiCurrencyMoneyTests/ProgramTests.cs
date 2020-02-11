@@ -12,13 +12,16 @@ namespace MultiCurrencyMoney.Tests
         [TestMethod()]
         public void TestMultiplication()
         {
-            // Timesメソッドから新しいオブジェクトが返るように実装するには、テストも書き換えないといけない。
-            // 正しいインターフェースをひらめくのは、正しい実装をひらめくのと同じくらい難しい。
+            // 概念的には、DollarのTimesメソッドは、自身の金額とmultiplier引数をかけた値を保持するDollarを返すべきだ。
+            // だが、ここまで書いてきたテストからは、Dollarを返すことは伝わりにくい。
+            // 最初のアサーションを修正して、Dollar同士を直接比較しよう。
+
+            // これで一時変数productは用をなさなくなったので、インライン化(P.258)してしまえる。
             Dollar five = new Dollar(5);
-            Dollar product = five.Times(2);
-            Assert.AreEqual(10, product.amount);
-            product = five.Times(3);
-            Assert.AreEqual(15, product.amount);
+            //Dollar product = five.Times(2);
+            Assert.AreEqual(new Dollar(10), /*product*/ five.Times(2));
+            //product = five.Times(3);
+            Assert.AreEqual(new Dollar(15), /*product*/ five.Times(3));
         }
 
         [TestMethod()]
