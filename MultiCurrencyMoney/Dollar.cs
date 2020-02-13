@@ -4,7 +4,7 @@ using System.Text;
 
 namespace MultiCurrencyMoney
 {
-    public class Dollar
+    public class Dollar : Money
     {
         // テストを変更したことで、amountフィールドをprivateに変更できる。
         private int amount;
