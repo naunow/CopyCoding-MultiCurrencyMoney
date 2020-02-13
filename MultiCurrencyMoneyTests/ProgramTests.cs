@@ -23,6 +23,11 @@ namespace MultiCurrencyMoney.Tests
         {
             Assert.IsTrue(new Dollar(5).Equals(new Dollar(5)));
             Assert.IsFalse(new Dollar(5).Equals(new Dollar(6)));
+
+            // Francの等価性比較のテストを書いていなかった。気づいたときに、テストは追加しよう。
+            Assert.IsTrue(new Franc(5).Equals(new Franc(5)));
+            Assert.IsFalse(new Franc(5).Equals(new Franc(6)));
+
         }
 
         [TestMethod()]
