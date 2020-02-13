@@ -4,9 +4,9 @@ using System.Text;
 
 namespace MultiCurrencyMoney
 {
-    public class Franc
+    public class Franc : Money
     {
-        private int amount;
+        //private int amount;
 
         public Franc(int amount)
         {
@@ -18,11 +18,12 @@ namespace MultiCurrencyMoney
             return new Franc(amount * multiplier);
         }
 
-        public bool Equals(Object obj)
-        {
-            Franc franc = (Franc)obj;
-            return amount == franc.amount;
-        }
+        // FrancのEqualsメソッドも、Dollarとまったく同じにできたので、削除できる。
+        //public bool Equals(Object obj)
+        //{
+        //    Money money = (Money)obj;
+        //    return amount == money.amount;
+        //}
 
     }
 }
