@@ -6,8 +6,7 @@ namespace MultiCurrencyMoney
 {
     public class Dollar : Money
     {
-        // テストを変更したことで、amountフィールドをprivateに変更できる。
-        private int amount;
+        //private int amount;
 
         public Dollar(int amount)
         {

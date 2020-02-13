@@ -6,5 +6,7 @@ namespace MultiCurrencyMoney
 {
     public class Money
     {
+        // Dollarクラスのamountフィールドを親クラスのMoneyに引き上げた。
+        protected int amount;
     }
 }
