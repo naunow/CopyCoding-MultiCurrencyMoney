@@ -7,6 +7,8 @@ namespace MultiCurrencyMoney
     public class Money
     {
         // Dollarクラスのamountフィールドを親クラスのMoneyに引き上げた。
-        protected int amount;
+        // 原著では protected だが、C#ではinternalにする必要がある。
+        // protectedだと、派生クラスからアクセスするには派生クラスの型を通してアクセスしなければならない。
+        internal int amount;
     }
 }

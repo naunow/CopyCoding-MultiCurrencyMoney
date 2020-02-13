@@ -20,8 +20,9 @@ namespace MultiCurrencyMoney
 
         public bool Equals(Object obj)
         {
-            Dollar dollar = (Dollar) obj;
-            return amount == dollar.amount;
+            // 一時変数の型をMoneyに変更する。
+            Money money = (Money) obj;
+            return amount == money.amount;
         }
     }
 }
