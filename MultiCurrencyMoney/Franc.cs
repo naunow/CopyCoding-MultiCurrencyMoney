@@ -18,12 +18,5 @@ namespace MultiCurrencyMoney
             return new Franc(amount * multiplier);
         }
 
-        // FrancのEqualsメソッドも、Dollarとまったく同じにできたので、削除できる。
-        //public bool Equals(Object obj)
-        //{
-        //    Money money = (Money)obj;
-        //    return amount == money.amount;
-        //}
-
     }
 }

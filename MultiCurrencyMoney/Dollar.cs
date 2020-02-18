@@ -18,11 +18,5 @@ namespace MultiCurrencyMoney
             return new Dollar(amount * multiplier);
         }
 
-        //public bool Equals(Object obj)
-        //{
-        //    // 一時変数の型をMoneyに変更する。
-        //    Money money = (Money) obj;
-        //    return amount == money.amount;
-        //}
     }
 }
