@@ -6,14 +6,12 @@ namespace MultiCurrencyMoney
 {
     public class Franc : Money
     {
-        //private int amount;
-
         public Franc(int amount)
         {
             this.amount = amount;
         }
 
-        public Money Times(int multiplier)
+        public override Money Times(int multiplier)
         {
             return new Franc(amount * multiplier);
         }

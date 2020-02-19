@@ -4,9 +4,10 @@ using System.Text;
 
 namespace MultiCurrencyMoney
 {
-    public class Money
+    public abstract class Money
     {
         internal int amount;
+        public abstract Money Times(int amount);
 
         public bool Equals(Object obj)
         {

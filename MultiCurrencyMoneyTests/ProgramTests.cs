@@ -14,7 +14,7 @@ namespace MultiCurrencyMoney.Tests
         {
             // Dollarを返すFactoryメソッドをMoneyに定義する。
             // そのメソッドはこうやって使う。
-            Dollar five = Money.Dollar(5);
+            Money five = Money.Dollar(5);
 
             Assert.IsTrue(new Dollar(10).Equals(five.Times(2)));
             Assert.IsTrue(new Dollar(15).Equals(five.Times(3)));
