@@ -12,7 +12,10 @@ namespace MultiCurrencyMoney.Tests
         [TestMethod()]
         public void TestMultiplication()
         {
-            Dollar five = new Dollar(5);
+            // Dollarを返すFactoryメソッドをMoneyに定義する。
+            // そのメソッドはこうやって使う。
+            Dollar five = Money.Dollar(5);
+
             Assert.IsTrue(new Dollar(10).Equals(five.Times(2)));
             Assert.IsTrue(new Dollar(15).Equals(five.Times(3)));
 
