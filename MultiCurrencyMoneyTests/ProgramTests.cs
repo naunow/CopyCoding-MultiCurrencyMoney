@@ -27,20 +27,20 @@ namespace MultiCurrencyMoney.Tests
             Assert.IsTrue(Money.Dollar(5).Equals(Money.Dollar(5)));
             Assert.IsFalse(Money.Dollar(5).Equals(Money.Dollar(6)));
 
-            Assert.IsTrue(new Franc(5).Equals(new Franc(5)));
-            Assert.IsFalse(new Franc(5).Equals(new Franc(6)));
+            Assert.IsTrue(Money.Franc(5).Equals(Money.Franc(5)));
+            Assert.IsFalse(Money.Franc(5).Equals(Money.Franc(6)));
 
             // DollarとFrancを比較したらどうなるのか、テストに書いてみよう。
-            Assert.IsFalse(new Franc(5).Equals(Money.Dollar(5)));
+            Assert.IsFalse(Money.Franc(5).Equals(Money.Dollar(5)));
 
         }
 
         [TestMethod()]
         public void TestFrancMultiplication()
         {
-            Franc five = new Franc(5);
-            Assert.IsTrue(new Franc(10).Equals(five.Times(2)));
-            Assert.IsTrue(new Franc(15).Equals(five.Times(3)));
+            Money five = Money.Franc(5);
+            Assert.IsTrue(Money.Franc(10).Equals(five.Times(2)));
+            Assert.IsTrue(Money.Franc(15).Equals(five.Times(3)));
         }
     }
 }
