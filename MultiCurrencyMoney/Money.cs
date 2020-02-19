@@ -11,7 +11,9 @@ namespace MultiCurrencyMoney
         public bool Equals(Object obj)
         {
             Money money = (Money)obj;
-            return amount == money.amount;
+            // 型が一致するかどうかの判定を行う。
+            return amount == money.amount 
+                && GetType().Equals(money.GetType());
         }
     }
 }
