@@ -10,6 +10,12 @@ namespace MultiCurrencyMoney
         protected String currency;
         public abstract Money Times(int amount);
 
+        public Money(int amount, String currency)
+        {
+            this.amount = amount;
+            this.currency = currency;
+        }
+
         public String Currency()
         {
             return currency;
