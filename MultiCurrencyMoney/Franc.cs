@@ -11,7 +11,7 @@ namespace MultiCurrencyMoney
         public Franc(int amount, String currency)
         {
             this.amount = amount;
-            this.currency = "CHF";
+            this.currency = currency;
         }
 
         public override Money Times(int multiplier)
