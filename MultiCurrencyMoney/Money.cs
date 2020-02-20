@@ -7,8 +7,13 @@ namespace MultiCurrencyMoney
     public abstract class Money
     {
         internal int amount;
+        protected String currency;
         public abstract Money Times(int amount);
-        public abstract String Currency();
+
+        public String Currency()
+        {
+            return currency;
+        }
 
         public bool Equals(Object obj)
         {
