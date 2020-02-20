@@ -8,6 +8,7 @@ namespace MultiCurrencyMoney
     {
         internal int amount;
         public abstract Money Times(int amount);
+        public abstract String Currency();
 
         public bool Equals(Object obj)
         {

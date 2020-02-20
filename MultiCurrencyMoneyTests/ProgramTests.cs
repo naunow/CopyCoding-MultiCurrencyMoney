@@ -42,5 +42,11 @@ namespace MultiCurrencyMoney.Tests
             Assert.IsTrue(Money.Franc(10).Equals(five.Times(2)));
             Assert.IsTrue(Money.Franc(15).Equals(five.Times(3)));
         }
+
+        public void TestCurrency()
+        {
+            Assert.AreEqual("USD", Money.Dollar(1).Currency());
+            Assert.AreEqual("CHF", Money.Franc(1).Currency());
+        }
     }
 }
